@@ -203,6 +203,46 @@
 			}).addTo(map);
 
 		});
+//		fetch('./cluster_data_trunc.json').then(function(response){
+//			return response.json();
+//		}).then(function(json){
+//            data = json
+//			
+//			var vectorTileOptions = {
+//				rendererFactory: L.canvas.tile,
+//				vectorTileLayerStyles: {
+//					'sliced': function(properties, zoom) {
+//						console.log(properties,zoom);
+//						return {
+//							weight: 2,
+//							color: 'red',
+//							opacity: 1,
+//							fillColor: 'yellow',
+//							fill: true,
+//							radius: 6,
+//							fillOpacity: 0.7
+//						};
+//					},
+//				},
+//				interactive: true	// Make sure that this VectorGrid fires mouse/pointer events
+//				//getFeatureId: function(f) {
+//				//	return f.properties.osm_id;
+//				//}
+//			};
+//
+//
+//		var pbfLayer = L.vectorGrid.slicer(data, vectorTileOptions)
+//			//.on('click', function(e) {	// The .on method attaches an event handler
+//			//	L.popup()
+//			//		.setContent(e.layer.properties.dhsreg)
+//			//		.setLatLng(e.latlng)
+//			//		.openOn(map);
+//			//
+//			//	L.DomEvent.stop(e);
+//			//})
+//			.addTo(map);
+//
+//		});
 
 		map.setView({ lat: 0, lng: 0 }, 3);
 
