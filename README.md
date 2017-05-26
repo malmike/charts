@@ -66,7 +66,8 @@ inject_css = models.TextField(null=True,blank=True)
 ```
 
 ### Chart types
-1. (Stacked) area chart
+
+#### 1. (Stacked) area chart
 - Location: area.js
 - Function: vb_area(svgSelector,config,csvDat)
 - Accepted configuration parameters:
@@ -76,7 +77,8 @@ inject_css = models.TextField(null=True,blank=True)
         y_maximum = [('auto','Automatic'),('manual','Manual (define below)')]
         legend_position = [('tr','Top right'),('tl','Top left'),('cr','Center right')]
 - Considerations: At the moment, the area chart needs some indicator to "group by" even if you're only visualizing a single area. This can be solved by appending a column of 1s to any dataset. At the moment, the chart is hardcoded to have a linear scale. "colour" parameter can accept multiple values via comma separation.
-2. Bar chart
+
+#### 2. Bar chart
 - Location: bar.js
 - Function: vb_bar(svgSelector,config,csvDat)
 - Accepted configuration parameters:
@@ -85,7 +87,8 @@ inject_css = models.TextField(null=True,blank=True)
     - sort = [('yasc','Y ascending'),('ydes','Y descending'),('xasc','X ascending'),('xdes','X descending')]
         x_maximum = [('auto','Automatic'),('manual','Manual (define below)')]
 - Considerations: At the moment, the chart is hardcoded to have a linear scale.
-3. Bubble chart
+
+#### 3. Bubble chart
 - Location: bubble.js
 - Function: vb_bubble(svgSelector,config,csvDat)
 - Accepted configuration parameters:
@@ -95,7 +98,8 @@ inject_css = models.TextField(null=True,blank=True)
         y_maximum = [('auto','Automatic'),('manual','Manual (define below)')]
         legend_position = [('tr','Top right'),('tl','Top left'),('cr','Center right')]
 - Considerations: At the moment, the chart is hardcoded to have a linear scale. "colour" parameter can accept multiple values via comma separation.
-4. Column chart
+
+#### 4. Column chart
 - Location: column.js
 - Function: vb_column(svgSelector,config,csvDat)
 - Accepted configuration parameters:
@@ -104,7 +108,8 @@ inject_css = models.TextField(null=True,blank=True)
     - sort = [('yasc','Y ascending'),('ydes','Y descending'),('xasc','X ascending'),('xdes','X descending')]
         y_maximum = [('auto','Automatic'),('manual','Manual (define below)')]
 - Considerations:  At the moment, the chart is hardcoded to have a linear scale.
-4. Donut chart
+
+#### 5. Donut chart
 - Location: donut.js
 - Function: vb_donut(svgSelector,config,csvDat)
 - Accepted configuration parameters:
@@ -112,7 +117,8 @@ inject_css = models.TextField(null=True,blank=True)
 - Parameter choices ('value','label'):
     - sort = [('native','Native ordering'),('avoid','Avoid text collisions'),('yasc','Y ascending'),('ydes','Y descending'),('xasc','X ascending'),('xdes','X descending')]
 - Considerations: Given slice angles, it's common for text labels to overlap. I prefer pie charts because the labels will pop into the slice when they fit, but Comms prefers donuts. Choose "avoid" for sort to try and avoid text collisions to the best of my ability. "colour" parameter can accept multiple values via comma separation.
-5. Grouped column chart
+
+#### 6. Grouped column chart
 - Location: grouped_column.js
 - Function: vb_grouped_column(svgSelector,config,csvDat)
 - Accepted configuration parameters:
@@ -122,7 +128,8 @@ inject_css = models.TextField(null=True,blank=True)
         y_maximum = [('auto','Automatic'),('manual','Manual (define below)')]
         legend_position = [('tr','Top right'),('tl','Top left'),('cr','Center right')]
 - Considerations: Must be used with "group_by." If you don't have anything to group by, just use vb_column. At the moment, the chart is hardcoded to have a linear scale. "colour" parameter can accept multiple values via comma separation.
-6. Line chart
+
+#### 7. Line chart
 - Location: line.js
 - Function: vb_line(svgSelector,config,csvDat)
 - Accepted configuration parameters:
@@ -131,7 +138,8 @@ inject_css = models.TextField(null=True,blank=True)
     - sort = [('yasc','Y ascending'),('ydes','Y descending'),('xasc','X ascending'),('xdes','X descending')]
         y_maximum = [('auto','Automatic'),('manual','Manual (define below)')]
 - Considerations: Just draws one line in a linear scale. Expect a multi-line chart in the future as needed.
-7. Pie chart
+
+#### 8. Pie chart
 - Location: pie.js
 - Function: vb_pie(svgSelector,config,csvDat)
 - Accepted configuration parameters:
@@ -139,7 +147,8 @@ inject_css = models.TextField(null=True,blank=True)
 - Parameter choices ('value','label'):
     - sort = [('native','Native ordering'),('avoid','Avoid text collisions'),('yasc','Y ascending'),('ydes','Y descending'),('xasc','X ascending'),('xdes','X descending')]
 - Considerations: As with donut chart, "avoid" is the best sorting algorithm. When labels are small enough, they'll pop into the slice. "colour" parameter can accept multiple values via comma separation.
-8. Stacked column chart
+
+#### 9. Stacked column chart
 - Location: stacked_column.js
 - Function: vb_stacked_column(svgSelector,config,csvDat)
 - Accepted configuration parameters:
@@ -149,8 +158,8 @@ inject_css = models.TextField(null=True,blank=True)
         y_maximum = [('auto','Automatic'),('manual','Manual (define below)')]
         legend_position = [('tr','Top right'),('tl','Top left'),('cr','Center right')]
 - Considerations: Must be used with "group_by." If you don't have anything to group by, just use vb_column. At the moment, the chart is hardcoded to have a linear scale. "colour" parameter can accept multiple values via comma separation.
-- Considerations:
-9. Tree chart
+
+#### 10. Tree chart
 - Location: tree.js
 - Function: vb_tree(svgSelector,config,csvDat)
 - Accepted configuration parameters:
