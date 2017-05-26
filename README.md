@@ -24,7 +24,7 @@
 
 ### Underlying model
 
-Underneath these functions is a single Django model that holds all of the configuration options for each chart. This model contains information about the data types of each configuration option, as well as any defaults. Not all options are used on all of the charts, and some options are just for the internal operation of Visbox itself ('title', 'dataset', 'creator', 'created', and 'save_as_template.' Please see below for the full model, and even further below for which charts use which options specifically.
+Underneath these functions is a single Django model that holds all of the configuration options for each chart. This model contains information about the data types of each configuration option, as well as any defaults. Not all options are used on all of the charts, and some options are just for the internal operation of Visbox itself ('title', 'dataset', 'creator', 'created', and 'save_as_template'). Please see below for the full model, and even further below for which charts use which options specifically.
 ```python
 title = models.CharField(null=True,blank=True,max_length=255)
 chart_type = models.CharField(max_length=255)
