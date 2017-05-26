@@ -71,99 +71,99 @@ inject_css = models.TextField(null=True,blank=True)
 - Location: area.js
 - Function: vb_area(svgSelector,config,csvDat)
 - Accepted configuration parameters:
-    - 'title','dataset','width','height','padding_top','padding_right','padding_bottom','padding_left','x_indicator','y_indicator','group_by','sort','y_maximum','y_maximum_value','unit_divisor','filter_by','filter_selection','colour','x_label','y_label','y_axis_ticks','x_text_rotation','labels_on_chart','label_font_size','label_format','legend_position','inject_css','save_as_template'
-- Parameter choices ('value','label'):
-    - sort = [('yasc','Y ascending'),('ydes','Y descending'),('xasc','X ascending'),('xdes','X descending')]
-        y_maximum = [('auto','Automatic'),('manual','Manual (define below)')]
-        legend_position = [('tr','Top right'),('tl','Top left'),('cr','Center right')]
+    - 'title', 'dataset', 'width', 'height', 'padding_top', 'padding_right', 'padding_bottom', 'padding_left', 'x_indicator', 'y_indicator', 'group_by', 'sort', 'y_maximum', 'y_maximum_value', 'unit_divisor', 'filter_by', 'filter_selection', 'colour', 'x_label', 'y_label', 'y_axis_ticks', 'x_text_rotation', 'labels_on_chart', 'label_font_size', 'label_format', 'legend_position', 'inject_css', 'save_as_template'
+- Parameter choices ('value', ' label'):
+    - sort = [('yasc', ' Y ascending'),('ydes', ' Y descending'),('xasc', ' X ascending'),('xdes', ' X descending')]
+    - y_maximum = [('auto', ' Automatic'),('manual', ' Manual (define below)')]
+    - legend_position = [('tr', ' Top right'),('tl', ' Top left'),('cr', ' Center right')]
 - Considerations: At the moment, the area chart needs some indicator to "group by" even if you're only visualizing a single area. This can be solved by appending a column of 1s to any dataset. At the moment, the chart is hardcoded to have a linear scale. "colour" parameter can accept multiple values via comma separation.
 
 #### 2. Bar chart
 - Location: bar.js
 - Function: vb_bar(svgSelector,config,csvDat)
 - Accepted configuration parameters:
-    - 'title','dataset','width','height','padding_top','padding_right','padding_bottom','padding_left','x_indicator','y_indicator','sort','x_maximum','x_maximum_value','filter_by','filter_selection','colour','x_label','y_label','x_text_rotation','labels_on_chart','label_font_size','label_format','inject_css','save_as_template'
-- Parameter choices ('value','label'):
-    - sort = [('yasc','Y ascending'),('ydes','Y descending'),('xasc','X ascending'),('xdes','X descending')]
-        x_maximum = [('auto','Automatic'),('manual','Manual (define below)')]
+    - 'title', 'dataset', 'width', 'height', 'padding_top', 'padding_right', 'padding_bottom', 'padding_left', 'x_indicator', 'y_indicator', 'sort', 'x_maximum', 'x_maximum_value', 'filter_by', 'filter_selection', 'colour', 'x_label', 'y_label', 'x_text_rotation', 'labels_on_chart', 'label_font_size', 'label_format', 'inject_css', 'save_as_template'
+- Parameter choices ('value', ' label'):
+    - sort = [('yasc', ' Y ascending'),('ydes', ' Y descending'),('xasc', ' X ascending'),('xdes', ' X descending')]
+    - x_maximum = [('auto', ' Automatic'),('manual', ' Manual (define below)')]
 - Considerations: At the moment, the chart is hardcoded to have a linear scale.
 
 #### 3. Bubble chart
 - Location: bubble.js
 - Function: vb_bubble(svgSelector,config,csvDat)
 - Accepted configuration parameters:
-    - 'title','dataset','width','height','padding_top','padding_right','padding_bottom','padding_left','x_indicator','y_indicator','z_indicator','c_indicator','sort','y_maximum','y_maximum_value','bubble_minimum','bubble_maximum','unit_divisor','filter_by','filter_selection','colour','x_label','y_label','y_axis_ticks','x_text_rotation','labels_on_chart','label_font_size','label_format','legend_position','inject_css','save_as_template'
-- Parameter choices ('value','label'):
-    - sort = [('yasc','Y ascending'),('ydes','Y descending'),('xasc','X ascending'),('xdes','X descending')]
-        y_maximum = [('auto','Automatic'),('manual','Manual (define below)')]
-        legend_position = [('tr','Top right'),('tl','Top left'),('cr','Center right')]
+    - 'title', 'dataset', 'width', 'height', 'padding_top', 'padding_right', 'padding_bottom', 'padding_left', 'x_indicator', 'y_indicator', 'z_indicator', 'c_indicator', 'sort', 'y_maximum', 'y_maximum_value', 'bubble_minimum', 'bubble_maximum', 'unit_divisor', 'filter_by', 'filter_selection', 'colour', 'x_label', 'y_label', 'y_axis_ticks', 'x_text_rotation', 'labels_on_chart', 'label_font_size', 'label_format', 'legend_position', 'inject_css', 'save_as_template'
+- Parameter choices ('value', ' label'):
+    - sort = [('yasc', ' Y ascending'),('ydes', ' Y descending'),('xasc', ' X ascending'),('xdes', ' X descending')]
+    - y_maximum = [('auto', ' Automatic'),('manual', ' Manual (define below)')]
+    - legend_position = [('tr', ' Top right'),('tl', ' Top left'),('cr', ' Center right')]
 - Considerations: At the moment, the chart is hardcoded to have a linear scale. "colour" parameter can accept multiple values via comma separation.
 
 #### 4. Column chart
 - Location: column.js
 - Function: vb_column(svgSelector,config,csvDat)
 - Accepted configuration parameters:
-    - 'title','dataset','width','height','padding_top','padding_right','padding_bottom','padding_left','x_indicator','y_indicator','sort','y_maximum','y_maximum_value','filter_by','filter_selection','colour','x_label','y_label','y_axis_ticks','x_text_rotation','labels_on_chart','label_font_size','label_format','inject_css','save_as_template'
-- Parameter choices ('value','label'):
-    - sort = [('yasc','Y ascending'),('ydes','Y descending'),('xasc','X ascending'),('xdes','X descending')]
-        y_maximum = [('auto','Automatic'),('manual','Manual (define below)')]
+    - 'title', 'dataset', 'width', 'height', 'padding_top', 'padding_right', 'padding_bottom', 'padding_left', 'x_indicator', 'y_indicator', 'sort', 'y_maximum', 'y_maximum_value', 'filter_by', 'filter_selection', 'colour', 'x_label', 'y_label', 'y_axis_ticks', 'x_text_rotation', 'labels_on_chart', 'label_font_size', 'label_format', 'inject_css', 'save_as_template'
+- Parameter choices ('value', ' label'):
+    - sort = [('yasc', ' Y ascending'),('ydes', ' Y descending'),('xasc', ' X ascending'),('xdes', ' X descending')]
+    - y_maximum = [('auto', ' Automatic'),('manual', ' Manual (define below)')]
 - Considerations:  At the moment, the chart is hardcoded to have a linear scale.
 
 #### 5. Donut chart
 - Location: donut.js
 - Function: vb_donut(svgSelector,config,csvDat)
 - Accepted configuration parameters:
-    - 'title','dataset','width','height','padding_top','padding_right','padding_bottom','padding_left','x_indicator','y_indicator','sort','filter_by','filter_selection','colour','label_font_size','label_format','inject_css','save_as_template'
-- Parameter choices ('value','label'):
-    - sort = [('native','Native ordering'),('avoid','Avoid text collisions'),('yasc','Y ascending'),('ydes','Y descending'),('xasc','X ascending'),('xdes','X descending')]
+    - 'title', 'dataset', 'width', 'height', 'padding_top', 'padding_right', 'padding_bottom', 'padding_left', 'x_indicator', 'y_indicator', 'sort', 'filter_by', 'filter_selection', 'colour', 'label_font_size', 'label_format', 'inject_css', 'save_as_template'
+- Parameter choices ('value', ' label'):
+    - sort = [('native', ' Native ordering'),('avoid', ' Avoid text collisions'),('yasc', ' Y ascending'),('ydes', ' Y descending'),('xasc', ' X ascending'),('xdes', ' X descending')]
 - Considerations: Given slice angles, it's common for text labels to overlap. I prefer pie charts because the labels will pop into the slice when they fit, but Comms prefers donuts. Choose "avoid" for sort to try and avoid text collisions to the best of my ability. "colour" parameter can accept multiple values via comma separation.
 
 #### 6. Grouped column chart
 - Location: grouped_column.js
 - Function: vb_grouped_column(svgSelector,config,csvDat)
 - Accepted configuration parameters:
-    - 'title','dataset','width','height','padding_top','padding_right','padding_bottom','padding_left','x_indicator','y_indicator','group_by','sort','y_maximum','y_maximum_value','unit_divisor','filter_by','filter_selection','colour','x_label','y_label','y_axis_ticks','x_text_rotation','labels_on_chart','label_font_size','label_format','legend_position','inject_css','save_as_template'
-- Parameter choices ('value','label'):
-    - sort = [('yasc','Y ascending'),('ydes','Y descending'),('xasc','X ascending'),('xdes','X descending')]
-        y_maximum = [('auto','Automatic'),('manual','Manual (define below)')]
-        legend_position = [('tr','Top right'),('tl','Top left'),('cr','Center right')]
+    - 'title', 'dataset', 'width', 'height', 'padding_top', 'padding_right', 'padding_bottom', 'padding_left', 'x_indicator', 'y_indicator', 'group_by', 'sort', 'y_maximum', 'y_maximum_value', 'unit_divisor', 'filter_by', 'filter_selection', 'colour', 'x_label', 'y_label', 'y_axis_ticks', 'x_text_rotation', 'labels_on_chart', 'label_font_size', 'label_format', 'legend_position', 'inject_css', 'save_as_template'
+- Parameter choices ('value', ' label'):
+    - sort = [('yasc', ' Y ascending'),('ydes', ' Y descending'),('xasc', ' X ascending'),('xdes', ' X descending')]
+    - y_maximum = [('auto', ' Automatic'),('manual', ' Manual (define below)')]
+    - legend_position = [('tr', ' Top right'),('tl', ' Top left'),('cr', ' Center right')]
 - Considerations: Must be used with "group_by." If you don't have anything to group by, just use vb_column. At the moment, the chart is hardcoded to have a linear scale. "colour" parameter can accept multiple values via comma separation.
 
 #### 7. Line chart
 - Location: line.js
 - Function: vb_line(svgSelector,config,csvDat)
 - Accepted configuration parameters:
-    - 'title','dataset','width','height','padding_top','padding_right','padding_bottom','padding_left','x_indicator','y_indicator','sort','y_maximum','y_maximum_value','filter_by','filter_selection','colour','x_label','y_label','y_axis_ticks','x_text_rotation','labels_on_chart','label_font_size','label_format','inject_css','save_as_template'
-- Parameter choices ('value','label'):
-    - sort = [('yasc','Y ascending'),('ydes','Y descending'),('xasc','X ascending'),('xdes','X descending')]
-        y_maximum = [('auto','Automatic'),('manual','Manual (define below)')]
+    - 'title', 'dataset', 'width', 'height', 'padding_top', 'padding_right', 'padding_bottom', 'padding_left', 'x_indicator', 'y_indicator', 'sort', 'y_maximum', 'y_maximum_value', 'filter_by', 'filter_selection', 'colour', 'x_label', 'y_label', 'y_axis_ticks', 'x_text_rotation', 'labels_on_chart', 'label_font_size', 'label_format', 'inject_css', 'save_as_template'
+- Parameter choices ('value', ' label'):
+    - sort = [('yasc', ' Y ascending'),('ydes', ' Y descending'),('xasc', ' X ascending'),('xdes', ' X descending')]
+    - y_maximum = [('auto', ' Automatic'),('manual', ' Manual (define below)')]
 - Considerations: Just draws one line in a linear scale. Expect a multi-line chart in the future as needed.
 
 #### 8. Pie chart
 - Location: pie.js
 - Function: vb_pie(svgSelector,config,csvDat)
 - Accepted configuration parameters:
-    - 'title','dataset','width','height','padding_top','padding_right','padding_bottom','padding_left','x_indicator','y_indicator','sort','filter_by','filter_selection','colour','label_font_size','label_format','inject_css','save_as_template'
-- Parameter choices ('value','label'):
-    - sort = [('native','Native ordering'),('avoid','Avoid text collisions'),('yasc','Y ascending'),('ydes','Y descending'),('xasc','X ascending'),('xdes','X descending')]
+    - 'title', 'dataset', 'width', 'height', 'padding_top', 'padding_right', 'padding_bottom', 'padding_left', 'x_indicator', 'y_indicator', 'sort', 'filter_by', 'filter_selection', 'colour', 'label_font_size', 'label_format', 'inject_css', 'save_as_template'
+- Parameter choices ('value', ' label'):
+    - sort = [('native', ' Native ordering'),('avoid', ' Avoid text collisions'),('yasc', ' Y ascending'),('ydes', ' Y descending'),('xasc', ' X ascending'),('xdes', ' X descending')]
 - Considerations: As with donut chart, "avoid" is the best sorting algorithm. When labels are small enough, they'll pop into the slice. "colour" parameter can accept multiple values via comma separation.
 
 #### 9. Stacked column chart
 - Location: stacked_column.js
 - Function: vb_stacked_column(svgSelector,config,csvDat)
 - Accepted configuration parameters:
-    - 'title','dataset','width','height','padding_top','padding_right','padding_bottom','padding_left','x_indicator','y_indicator','group_by','sort','y_maximum','y_maximum_value','unit_divisor','filter_by','filter_selection','colour','x_label','y_label','y_axis_ticks','x_text_rotation','labels_on_chart','label_font_size','label_format','legend_position','inject_css','save_as_template'
-- Parameter choices ('value','label'):
-    - sort = [('yasc','Y ascending'),('ydes','Y descending'),('xasc','X ascending'),('xdes','X descending')]
-        y_maximum = [('auto','Automatic'),('manual','Manual (define below)')]
-        legend_position = [('tr','Top right'),('tl','Top left'),('cr','Center right')]
+    - 'title', 'dataset', 'width', 'height', 'padding_top', 'padding_right', 'padding_bottom', 'padding_left', 'x_indicator', 'y_indicator', 'group_by', 'sort', 'y_maximum', 'y_maximum_value', 'unit_divisor', 'filter_by', 'filter_selection', 'colour', 'x_label', 'y_label', 'y_axis_ticks', 'x_text_rotation', 'labels_on_chart', 'label_font_size', 'label_format', 'legend_position', 'inject_css', 'save_as_template'
+- Parameter choices ('value', ' label'):
+    - sort = [('yasc', ' Y ascending'),('ydes', ' Y descending'),('xasc', ' X ascending'),('xdes', ' X descending')]
+    - y_maximum = [('auto', ' Automatic'),('manual', ' Manual (define below)')]
+    - legend_position = [('tr', ' Top right'),('tl', ' Top left'),('cr', ' Center right')]
 - Considerations: Must be used with "group_by." If you don't have anything to group by, just use vb_column. At the moment, the chart is hardcoded to have a linear scale. "colour" parameter can accept multiple values via comma separation.
 
 #### 10. Tree chart
 - Location: tree.js
 - Function: vb_tree(svgSelector,config,csvDat)
 - Accepted configuration parameters:
-    - 'title','dataset','width','height','padding_top','padding_right','padding_bottom','padding_left','x_indicator','y_indicator','c_indicator','sort','unit_divisor','filter_by','filter_selection','colour','label_font_size','label_format','inject_css','save_as_template'
-- Parameter choices ('value','label'):
-    - sort = [('native','Native ordering'),('yasc','Y ascending'),('ydes','Y descending'),('xasc','X ascending'),('xdes','X descending'),('casc','C ascending'),('cdes','C descending')]
+    - 'title', 'dataset', 'width', 'height', 'padding_top', 'padding_right', 'padding_bottom', 'padding_left', 'x_indicator', 'y_indicator', 'c_indicator', 'sort', 'unit_divisor', 'filter_by', 'filter_selection', 'colour', 'label_font_size', 'label_format', 'inject_css', 'save_as_template'
+- Parameter choices ('value', ' label'):
+    - sort = [('native', ' Native ordering'),('yasc', ' Y ascending'),('ydes', ' Y descending'),('xasc', ' X ascending'),('xdes', ' X descending'),('casc', ' C ascending'),('cdes', ' C descending')]
 - Considerations: Just a single layered tree chart. Can be utilized as a 2D tree chart if you specify a C indicator (sized by y_indicator, coloured on a linear scale by c_indicator). "colour" parameter can accept multiple values via comma separation.
