@@ -1,0 +1,30 @@
+{
+    "name": "bar",
+    "description": "A bar chart",
+    "properties": {
+        "title"
+        ,"dataset"
+        ,"width"
+        ,"height"
+        ,"padding_top"
+        ,"padding_right"
+        ,"padding_bottom"
+        ,"padding_left"
+        ,"x_indicator"
+        ,"y_indicator"
+        ,"sort"
+        ,"x_maximum"
+        ,"x_maximum_value"
+        ,"filter_by"
+        ,"filter_selection"
+        ,"colour"
+        ,"x_label"
+        ,"y_label"
+        ,"x_text_rotation"
+        ,"labels_on_chart"
+        ,"label_font_size"
+        ,"label_format"
+        ,"inject_css"
+        ,"save_as_template"
+    }
+}
