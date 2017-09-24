@@ -1,180 +1,388 @@
 <!doctype html>
 <!--suppress ALL -->
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>DiCharts</title>
-    <base/>
-    <link rel="stylesheet" href="/di-charts.css">
-    <link rel="icon" href="http://data.devinit.org/favicon.ico?v=2"/>
-    <script src="/di-charts.js"></script>
-    <script>
-      DiCharts.setColorPalette([{"name": "red1", "color": "#e84439"}, {
-        "name": "red2",
-        "color": "#f8c1b2"
-      }, {"name": "red3", "color": "#f0826d"}, {"name": "red4", "color": "#bc2629"}, {
-        "name": "red5",
-        "color": "#8f1b13"
-      }, {"name": "red6", "color": "#fce3dc"}, {"name": "red7", "color": "#fbd7cb"}, {
-        "name": "red8",
-        "color": "#f6b0a0"
-      }, {"name": "red9", "color": "#ec6250"}, {"name": "red10", "color": "#dc372d"}, {
-        "name": "red11",
-        "color": "#cd2b2a"
-      }, {"name": "red12", "color": "#a21e25"}, {"name": "red13", "color": "#6b120a"}, {
-        "name": "orange1",
-        "color": "#eb642b"
-      }, {"name": "orange2", "color": "#f6bb9d"}, {"name": "orange3", "color": "#f18e5e"}, {
-        "name": "orange4",
-        "color": "#d85b31"
-      }, {"name": "orange5", "color": "#973915"}, {"name": "orange6", "color": "#fde5d4"}, {
-        "name": "orange7",
-        "color": "#fcdbbf"
-      }, {"name": "orange8", "color": "#facbad"}, {"name": "orange9", "color": "#f3a47c"}, {
-        "name": "orange10",
-        "color": "#ee7644"
-      }, {"name": "orange11", "color": "#cb5730"}, {"name": "orange12", "color": "#ac4622"}, {
-        "name": "orange13",
-        "color": "#7a2e05"
-      }, {"name": "yellow1", "color": "#f49b21"}, {"name": "yellow2", "color": "#fccc8e"}, {
-        "name": "yellow3",
-        "color": "#f9b865"
-      }, {"name": "yellow4", "color": "#e48a00"}, {"name": "yellow5", "color": "#a85d00"}, {
-        "name": "yellow6",
-        "color": "#feedd4"
-      }, {"name": "yellow7", "color": "#fee7c1"}, {"name": "yellow8", "color": "#fedcab"}, {
-        "name": "yellow9",
-        "color": "#fac47e"
-      }, {"name": "yellow10", "color": "#f7a838"}, {"name": "yellow11", "color": "#df8000"}, {
-        "name": "yellow12",
-        "color": "#ba6b15"
-      }, {"name": "yellow13", "color": "#7d4712"}, {"name": "pink1", "color": "#c2135b"}, {
-        "name": "pink2",
-        "color": "#e4819b"
-      }, {"name": "pink3", "color": "#d64278"}, {"name": "pink4", "color": "#ad1257"}, {
-        "name": "pink5",
-        "color": "#7e1850"
-      }, {"name": "pink6", "color": "#f9cdd0"}, {"name": "pink7", "color": "#f6b8c1"}, {
-        "name": "pink8",
-        "color": "#f3a5b6"
-      }, {"name": "pink9", "color": "#e05c86"}, {"name": "pink10", "color": "#d12568"}, {
-        "name": "pink11",
-        "color": "#9f1459"
-      }, {"name": "pink12", "color": "#8d0e56"}, {"name": "pink13", "color": "#65093d"}, {
-        "name": "purple1",
-        "color": "#893f90"
-      }, {"name": "purple2", "color": "#c189bb"}, {"name": "purple3", "color": "#a45ea1"}, {
-        "name": "purple4",
-        "color": "#7b3b89"
-      }, {"name": "purple5", "color": "#551f65"}, {"name": "purple6", "color": "#ebcfe5"}, {
-        "name": "purple7",
-        "color": "#deb5d6"
-      }, {"name": "purple8", "color": "#cb98c4"}, {"name": "purple9", "color": "#af73ae"}, {
-        "name": "purple10",
-        "color": "#994d98"
-      }, {"name": "purple11", "color": "#732c85"}, {"name": "purple12", "color": "#632572"}, {
-        "name": "purple13",
-        "color": "#42184c"
-      }, {"name": "blue1", "color": "#0089cc"}, {"name": "blue2", "color": "#88bae5"}, {
-        "name": "blue3",
-        "color": "#5da3d9"
-      }, {"name": "blue4", "color": "#0071b1"}, {"name": "blue5", "color": "#0c457b"}, {
-        "name": "blue6",
-        "color": "#d3e0f4"
-      }, {"name": "blue7", "color": "#bcd4f0"}, {"name": "blue8", "color": "#a3c7eb"}, {
-        "name": "blue9",
-        "color": "#77adde"
-      }, {"name": "blue10", "color": "#4397d3"}, {"name": "blue11", "color": "#105fa3"}, {
-        "name": "blue12",
-        "color": "#00538e"
-      }, {"name": "blue13", "color": "#0a3a64"}, {"name": "green1", "color": "#109e68"}, {
-        "name": "green2",
-        "color": "#92cba9"
-      }, {"name": "green3", "color": "#5ab88a"}, {"name": "green4", "color": "#1e8259"}, {
-        "name": "green5",
-        "color": "#16513a"
-      }, {"name": "green6", "color": "#c5e1cb"}, {"name": "green7", "color": "#b1d8bb"}, {
-        "name": "green8",
-        "color": "#a2d1b0"
-      }, {"name": "green9", "color": "#74bf93"}, {"name": "green10", "color": "#3b8c61"}, {
-        "name": "green11",
-        "color": "#00694a"
-      }, {"name": "green12", "color": "#005b3e"}, {"name": "green13", "color": "#07482e"}, {
-        "name": "grey1",
-        "color": "#6a6569"
-      }, {"name": "grey2", "color": "#a9a6aa"}, {"name": "grey3", "color": "#847e84"}, {
-        "name": "grey4",
-        "color": "#555053"
-      }, {"name": "grey5", "color": "#443e42"}, {"name": "grey6", "color": "#d9d4da"}, {
-        "name": "grey7",
-        "color": "#cac5cb"
-      }, {"name": "grey8", "color": "#b3b0b7"}, {"name": "grey9", "color": "#b9b5bb"}, {
-        "name": "grey10",
-        "color": "#5a545a"
-      }, {"name": "grey11", "color": "#736e73"}, {"name": "grey12", "color": "#4e484c"}, {
-        "name": "grey13",
-        "color": "#302b2e"
-      }])
-    </script>
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DiCharts</title>
+  <base/>
+  <link rel="stylesheet" href="/di-charts.css">
+  <link rel="icon" href="http://data.devinit.org/favicon.ico?v=2" />
+  <script src="/di-charts.js"></script>
+  <script>
+    DiCharts.setColorPalette([{
+      "name": "red1",
+      "color": "#e84439"
+    }, {
+      "name": "red2",
+      "color": "#f8c1b2"
+    }, {
+      "name": "red3",
+      "color": "#f0826d"
+    }, {
+      "name": "red4",
+      "color": "#bc2629"
+    }, {
+      "name": "red5",
+      "color": "#8f1b13"
+    }, {
+      "name": "red6",
+      "color": "#fce3dc"
+    }, {
+      "name": "red7",
+      "color": "#fbd7cb"
+    }, {
+      "name": "red8",
+      "color": "#f6b0a0"
+    }, {
+      "name": "red9",
+      "color": "#ec6250"
+    }, {
+      "name": "red10",
+      "color": "#dc372d"
+    }, {
+      "name": "red11",
+      "color": "#cd2b2a"
+    }, {
+      "name": "red12",
+      "color": "#a21e25"
+    }, {
+      "name": "red13",
+      "color": "#6b120a"
+    }, {
+      "name": "orange1",
+      "color": "#eb642b"
+    }, {
+      "name": "orange2",
+      "color": "#f6bb9d"
+    }, {
+      "name": "orange3",
+      "color": "#f18e5e"
+    }, {
+      "name": "orange4",
+      "color": "#d85b31"
+    }, {
+      "name": "orange5",
+      "color": "#973915"
+    }, {
+      "name": "orange6",
+      "color": "#fde5d4"
+    }, {
+      "name": "orange7",
+      "color": "#fcdbbf"
+    }, {
+      "name": "orange8",
+      "color": "#facbad"
+    }, {
+      "name": "orange9",
+      "color": "#f3a47c"
+    }, {
+      "name": "orange10",
+      "color": "#ee7644"
+    }, {
+      "name": "orange11",
+      "color": "#cb5730"
+    }, {
+      "name": "orange12",
+      "color": "#ac4622"
+    }, {
+      "name": "orange13",
+      "color": "#7a2e05"
+    }, {
+      "name": "yellow1",
+      "color": "#f49b21"
+    }, {
+      "name": "yellow2",
+      "color": "#fccc8e"
+    }, {
+      "name": "yellow3",
+      "color": "#f9b865"
+    }, {
+      "name": "yellow4",
+      "color": "#e48a00"
+    }, {
+      "name": "yellow5",
+      "color": "#a85d00"
+    }, {
+      "name": "yellow6",
+      "color": "#feedd4"
+    }, {
+      "name": "yellow7",
+      "color": "#fee7c1"
+    }, {
+      "name": "yellow8",
+      "color": "#fedcab"
+    }, {
+      "name": "yellow9",
+      "color": "#fac47e"
+    }, {
+      "name": "yellow10",
+      "color": "#f7a838"
+    }, {
+      "name": "yellow11",
+      "color": "#df8000"
+    }, {
+      "name": "yellow12",
+      "color": "#ba6b15"
+    }, {
+      "name": "yellow13",
+      "color": "#7d4712"
+    }, {
+      "name": "pink1",
+      "color": "#c2135b"
+    }, {
+      "name": "pink2",
+      "color": "#e4819b"
+    }, {
+      "name": "pink3",
+      "color": "#d64278"
+    }, {
+      "name": "pink4",
+      "color": "#ad1257"
+    }, {
+      "name": "pink5",
+      "color": "#7e1850"
+    }, {
+      "name": "pink6",
+      "color": "#f9cdd0"
+    }, {
+      "name": "pink7",
+      "color": "#f6b8c1"
+    }, {
+      "name": "pink8",
+      "color": "#f3a5b6"
+    }, {
+      "name": "pink9",
+      "color": "#e05c86"
+    }, {
+      "name": "pink10",
+      "color": "#d12568"
+    }, {
+      "name": "pink11",
+      "color": "#9f1459"
+    }, {
+      "name": "pink12",
+      "color": "#8d0e56"
+    }, {
+      "name": "pink13",
+      "color": "#65093d"
+    }, {
+      "name": "purple1",
+      "color": "#893f90"
+    }, {
+      "name": "purple2",
+      "color": "#c189bb"
+    }, {
+      "name": "purple3",
+      "color": "#a45ea1"
+    }, {
+      "name": "purple4",
+      "color": "#7b3b89"
+    }, {
+      "name": "purple5",
+      "color": "#551f65"
+    }, {
+      "name": "purple6",
+      "color": "#ebcfe5"
+    }, {
+      "name": "purple7",
+      "color": "#deb5d6"
+    }, {
+      "name": "purple8",
+      "color": "#cb98c4"
+    }, {
+      "name": "purple9",
+      "color": "#af73ae"
+    }, {
+      "name": "purple10",
+      "color": "#994d98"
+    }, {
+      "name": "purple11",
+      "color": "#732c85"
+    }, {
+      "name": "purple12",
+      "color": "#632572"
+    }, {
+      "name": "purple13",
+      "color": "#42184c"
+    }, {
+      "name": "blue1",
+      "color": "#0089cc"
+    }, {
+      "name": "blue2",
+      "color": "#88bae5"
+    }, {
+      "name": "blue3",
+      "color": "#5da3d9"
+    }, {
+      "name": "blue4",
+      "color": "#0071b1"
+    }, {
+      "name": "blue5",
+      "color": "#0c457b"
+    }, {
+      "name": "blue6",
+      "color": "#d3e0f4"
+    }, {
+      "name": "blue7",
+      "color": "#bcd4f0"
+    }, {
+      "name": "blue8",
+      "color": "#a3c7eb"
+    }, {
+      "name": "blue9",
+      "color": "#77adde"
+    }, {
+      "name": "blue10",
+      "color": "#4397d3"
+    }, {
+      "name": "blue11",
+      "color": "#105fa3"
+    }, {
+      "name": "blue12",
+      "color": "#00538e"
+    }, {
+      "name": "blue13",
+      "color": "#0a3a64"
+    }, {
+      "name": "green1",
+      "color": "#109e68"
+    }, {
+      "name": "green2",
+      "color": "#92cba9"
+    }, {
+      "name": "green3",
+      "color": "#5ab88a"
+    }, {
+      "name": "green4",
+      "color": "#1e8259"
+    }, {
+      "name": "green5",
+      "color": "#16513a"
+    }, {
+      "name": "green6",
+      "color": "#c5e1cb"
+    }, {
+      "name": "green7",
+      "color": "#b1d8bb"
+    }, {
+      "name": "green8",
+      "color": "#a2d1b0"
+    }, {
+      "name": "green9",
+      "color": "#74bf93"
+    }, {
+      "name": "green10",
+      "color": "#3b8c61"
+    }, {
+      "name": "green11",
+      "color": "#00694a"
+    }, {
+      "name": "green12",
+      "color": "#005b3e"
+    }, {
+      "name": "green13",
+      "color": "#07482e"
+    }, {
+      "name": "grey1",
+      "color": "#6a6569"
+    }, {
+      "name": "grey2",
+      "color": "#a9a6aa"
+    }, {
+      "name": "grey3",
+      "color": "#847e84"
+    }, {
+      "name": "grey4",
+      "color": "#555053"
+    }, {
+      "name": "grey5",
+      "color": "#443e42"
+    }, {
+      "name": "grey6",
+      "color": "#d9d4da"
+    }, {
+      "name": "grey7",
+      "color": "#cac5cb"
+    }, {
+      "name": "grey8",
+      "color": "#b3b0b7"
+    }, {
+      "name": "grey9",
+      "color": "#b9b5bb"
+    }, {
+      "name": "grey10",
+      "color": "#5a545a"
+    }, {
+      "name": "grey11",
+      "color": "#736e73"
+    }, {
+      "name": "grey12",
+      "color": "#4e484c"
+    }, {
+      "name": "grey13",
+      "color": "#302b2e"
+    }])
+  </script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-        body {
-            width: 700px;
-            background-color: #eee;
-            padding: 0;
-            margin: 0 auto;
-        }
+    body {
+      width: 700px;
+      background-color: #eee;
+      padding: 0;
+      margin: 0 auto;
+    }
 
-        body script {
-            display: block;
-            background-color: rgba(70, 191, 203, 0.1);
-            padding: 10px;
-            white-space: pre-wrap;
-        }
+    body script {
+      display: block;
+      background-color: rgba(70, 191, 203, 0.1);
+      padding: 10px;
+      white-space: pre-wrap;
+    }
 
-        section {
-            padding: 2em 2em;
-            background-color: #fff;
-            margin: 1em 0;
-        }
+    section {
+      padding: 2em 2em;
+      background-color: #fff;
+      margin: 1em 0;
+    }
 
-        .chart {
-            width: 100%;
-            height: 400px;
-            padding: 1em;
-            margin: 0 0 1em;
-            box-shadow: 0 0 1px 1px #eee;
-        }
+    .chart {
+      width: 100%;
+      height: 400px;
+      padding: 1em;
+      margin: 0 0 1em;
+      box-shadow: 0 0 1px 1px #eee;
+    }
 
-        h2, h3 {
-            margin: 0;
-        }
-    </style>
+    h2,
+    h3 {
+      margin: 0;
+    }
+  </style>
 </head>
 
 <body>
 
-<section>
+  <section>
     <h2>Devinit Charts</h2>
     <p>Draw charts from csv-like data</p>
 
     <div>
-        <img src="https://travis-ci.org/devinit/charts.svg?branch=master" alt="Build Status">
-        <a class="github-button" href="https://github.com/devinit/charts" style="display: none"
-           data-icon="octicon-star" data-show-count="true" aria-label="Star devinit/charts on GitHub">Star</a>
+      <img src="https://travis-ci.org/devinit/charts.svg?branch=master" alt="Build Status">
+      <a class="github-button" href="https://github.com/devinit/charts" style="display: none" data-icon="octicon-star" data-show-count="true"
+        aria-label="Star devinit/charts on GitHub">Star</a>
     </div>
-</section>
+  </section>
 
-<section>
+  <section>
     <div class="chart">
-        <div id="line_chart"></div>
+      <div id="line_chart"></div>
     </div>
     <script>
       DiCharts.draw({
@@ -206,33 +414,104 @@
             showLegend: true
           }
         },
-        data: [
-          {"Rainfall": 960000, "Years": "2000", "Months": "Jan"},
-          {"Rainfall": 980000, "Years": "2001", "Months": "Jan"},
-          {"Rainfall": 1300000, "Years": "2002", "Months": "Jan"},
-          {"Rainfall": 1500000, "Years": "2003", "Months": "Jan"},
-          {"Rainfall": 1800000, "Years": "2004", "Months": "Jan"},
-          {"Rainfall": 2000000, "Years": "2005", "Months": "Jan"},
-          {"Rainfall": 2700000, "Years": "2007", "Months": "Jan"},
-          {"Rainfall": 2300000, "Years": "2008", "Months": "Jan"},
-          {"Rainfall": 2100000, "Years": "2009", "Months": "Jan"},
-          {"Rainfall": 2540000, "Years": "2010", "Months": "Jan"},
-          {"Rainfall": 1230000, "Years": "2011", "Months": "Jan"},
-          {"Rainfall": 4530000, "Years": "2012", "Months": "Jan"},
-          {"Rainfall": 2310000, "Years": "2013", "Months": "Jan"},
-          {"Rainfall": 2640000, "Years": "2014", "Months": "Jan"},
-          {"Rainfall": 3210000, "Years": "2015", "Months": "Jan"},
-          {"Rainfall": 1830000, "Years": "2016", "Months": "Jan"},
-          {"Rainfall": 1430000, "Years": "2017", "Months": "Jan"},
-          {"Rainfall": 1640000, "Years": "2018", "Months": "Jan"},
+        data: [{
+            "Rainfall": 960000,
+            "Years": "2000",
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 980000,
+            "Years": "2001",
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 1300000,
+            "Years": "2002",
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 1500000,
+            "Years": "2003",
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 1800000,
+            "Years": "2004",
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 2000000,
+            "Years": "2005",
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 2700000,
+            "Years": "2007",
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 2300000,
+            "Years": "2008",
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 2100000,
+            "Years": "2009",
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 2540000,
+            "Years": "2010",
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 1230000,
+            "Years": "2011",
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 4530000,
+            "Years": "2012",
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 2310000,
+            "Years": "2013",
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 2640000,
+            "Years": "2014",
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 3210000,
+            "Years": "2015",
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 1830000,
+            "Years": "2016",
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 1430000,
+            "Years": "2017",
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 1640000,
+            "Years": "2018",
+            "Months": "Jan"
+          },
         ]
       })
     </script>
-</section>
+  </section>
 
-<section>
+  <section>
     <div class="chart">
-        <div id="timeline_chart"></div>
+      <div id="timeline_chart"></div>
     </div>
     <script>
       DiCharts.draw({
@@ -267,52 +546,199 @@
             showLegend: true
           }
         },
-        data: [
-          {"Rainfall": 960000, "Years": 2000, "Months": "Jan"},
-          {"Rainfall": 1300000, "Years": 2002, "Months": "Jan"},
-          {"Rainfall": 1500000, "Years": 2003, "Months": "Jan"},
-          {"Rainfall": 1800000, "Years": 2004, "Months": "Jan"},
-          {"Rainfall": 2000000, "Years": 2005, "Months": "Jan"},
-          {"Rainfall": 1200000, "Years": 2006, "Months": "Jan"},
-          {"Rainfall": 2700000, "Years": 2007, "Months": "Jan"},
-          {"Rainfall": 2300000, "Years": 2008, "Months": "Jan"},
-          {"Rainfall": 2100000, "Years": 2009, "Months": "Jan"},
-          {"Rainfall": 2540000, "Years": 2010, "Months": "Jan"},
-          {"Rainfall": 1230000, "Years": 2011, "Months": "Jan"},
-          {"Rainfall": 4530000, "Years": 2012, "Months": "Jan"},
-          {"Rainfall": 2310000, "Years": 2013, "Months": "Jan"},
-          {"Rainfall": 2640000, "Years": 2014, "Months": "Jan"},
-          {"Rainfall": 3210000, "Years": 2015, "Months": "Jan"},
-          {"Rainfall": 1830000, "Years": 2016, "Months": "Jan"},
-          {"Rainfall": 1430000, "Years": 2017, "Months": "Jan"},
-          {"Rainfall": 1640000, "Years": 2018, "Months": "Jan"},
-          {"Rainfall": 960000, "Years": 2000, "Months": "Feb"},
-          {"Rainfall": 980000, "Years": 2001, "Months": "Feb"},
-          {"Rainfall": 1300000, "Years": 2002, "Months": "Feb"},
-          {"Rainfall": 1500000, "Years": 2003, "Months": "Feb"},
-          {"Rainfall": 1800000, "Years": 2004, "Months": "Feb"},
-          {"Rainfall": 2000000, "Years": 2005, "Months": "Feb"},
-          {"Rainfall": 1200000, "Years": 2006, "Months": "Feb"},
-          {"Rainfall": 2700000, "Years": 2007, "Months": "Feb"},
-          {"Rainfall": 2300000, "Years": 2008, "Months": "Feb"},
-          {"Rainfall": 2100000, "Years": 2009, "Months": "Feb"},
-          {"Rainfall": 2540000, "Years": 2010, "Months": "Feb"},
-          {"Rainfall": 1230000, "Years": 2011, "Months": "Feb"},
-          {"Rainfall": 4530000, "Years": 2012, "Months": "Feb"},
-          {"Rainfall": 2310000, "Years": 2013, "Months": "Feb"},
-          {"Rainfall": 2640000, "Years": 2014, "Months": "Feb"},
-          {"Rainfall": 3210000, "Years": 2015, "Months": "Feb"},
-          {"Rainfall": 1830000, "Years": 2016, "Months": "Feb"},
-          {"Rainfall": 1430000, "Years": 2017, "Months": "Feb"},
-          {"Rainfall": 1640000, "Years": 2018, "Months": "Feb"},
+        data: [{
+            "Rainfall": 960000,
+            "Years": 2000,
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 1300000,
+            "Years": 2002,
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 1500000,
+            "Years": 2003,
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 1800000,
+            "Years": 2004,
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 2000000,
+            "Years": 2005,
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 1200000,
+            "Years": 2006,
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 2700000,
+            "Years": 2007,
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 2300000,
+            "Years": 2008,
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 2100000,
+            "Years": 2009,
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 2540000,
+            "Years": 2010,
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 1230000,
+            "Years": 2011,
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 4530000,
+            "Years": 2012,
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 2310000,
+            "Years": 2013,
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 2640000,
+            "Years": 2014,
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 3210000,
+            "Years": 2015,
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 1830000,
+            "Years": 2016,
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 1430000,
+            "Years": 2017,
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 1640000,
+            "Years": 2018,
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 960000,
+            "Years": 2000,
+            "Months": "Feb"
+          },
+          {
+            "Rainfall": 980000,
+            "Years": 2001,
+            "Months": "Feb"
+          },
+          {
+            "Rainfall": 1300000,
+            "Years": 2002,
+            "Months": "Feb"
+          },
+          {
+            "Rainfall": 1500000,
+            "Years": 2003,
+            "Months": "Feb"
+          },
+          {
+            "Rainfall": 1800000,
+            "Years": 2004,
+            "Months": "Feb"
+          },
+          {
+            "Rainfall": 2000000,
+            "Years": 2005,
+            "Months": "Feb"
+          },
+          {
+            "Rainfall": 1200000,
+            "Years": 2006,
+            "Months": "Feb"
+          },
+          {
+            "Rainfall": 2700000,
+            "Years": 2007,
+            "Months": "Feb"
+          },
+          {
+            "Rainfall": 2300000,
+            "Years": 2008,
+            "Months": "Feb"
+          },
+          {
+            "Rainfall": 2100000,
+            "Years": 2009,
+            "Months": "Feb"
+          },
+          {
+            "Rainfall": 2540000,
+            "Years": 2010,
+            "Months": "Feb"
+          },
+          {
+            "Rainfall": 1230000,
+            "Years": 2011,
+            "Months": "Feb"
+          },
+          {
+            "Rainfall": 4530000,
+            "Years": 2012,
+            "Months": "Feb"
+          },
+          {
+            "Rainfall": 2310000,
+            "Years": 2013,
+            "Months": "Feb"
+          },
+          {
+            "Rainfall": 2640000,
+            "Years": 2014,
+            "Months": "Feb"
+          },
+          {
+            "Rainfall": 3210000,
+            "Years": 2015,
+            "Months": "Feb"
+          },
+          {
+            "Rainfall": 1830000,
+            "Years": 2016,
+            "Months": "Feb"
+          },
+          {
+            "Rainfall": 1430000,
+            "Years": 2017,
+            "Months": "Feb"
+          },
+          {
+            "Rainfall": 1640000,
+            "Years": 2018,
+            "Months": "Feb"
+          },
         ]
       })
     </script>
-</section>
+  </section>
 
-<section>
+  <section>
     <div class="chart">
-        <div id="area_chart"></div>
+      <div id="area_chart"></div>
     </div>
     <script>
       DiCharts.draw({
@@ -333,21 +759,38 @@
             indicator: 'Months',
           }
         },
-        data: [
-          {"Rainfall": 100, "Months": "Jan"},
-          {"Rainfall": 200, "Months": "Feb"},
-          {"Rainfall": 120, "Months": "Mar"},
-          {"Rainfall": 270, "Months": "Apr"},
-          {"Rainfall": 230, "Months": "May"},
-          {"Rainfall": 210, "Months": "Jun"},
+        data: [{
+            "Rainfall": 100,
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 200,
+            "Months": "Feb"
+          },
+          {
+            "Rainfall": 120,
+            "Months": "Mar"
+          },
+          {
+            "Rainfall": 270,
+            "Months": "Apr"
+          },
+          {
+            "Rainfall": 230,
+            "Months": "May"
+          },
+          {
+            "Rainfall": 210,
+            "Months": "Jun"
+          },
         ]
       })
     </script>
-</section>
+  </section>
 
-<section>
+  <section>
     <div class="chart">
-        <div id="stacked-area"></div>
+      <div id="stacked-area"></div>
     </div>
     <script>
       DiCharts.draw({
@@ -369,27 +812,74 @@
             indicator: 'Months',
           }
         },
-        data: [
-          {"Rainfall": 100, "Years": "1992", "Months": "Jan"},
-          {"Rainfall": 200, "Years": "1992", "Months": "Feb"},
-          {"Rainfall": 120, "Years": "1992", "Months": "Mar"},
-          {"Rainfall": 270, "Years": "1992", "Months": "Apr"},
-          {"Rainfall": 230, "Years": "1992", "Months": "May"},
-          {"Rainfall": 210, "Years": "1992", "Months": "Jun"},
-          {"Rainfall": 123, "Years": "1993", "Months": "Jan"},
-          {"Rainfall": 234, "Years": "1993", "Months": "Feb"},
-          {"Rainfall": 342, "Years": "1993", "Months": "Mar"},
-          {"Rainfall": 234, "Years": "1993", "Months": "Apr"},
-          {"Rainfall": 354, "Years": "1993", "Months": "May"},
-          {"Rainfall": 123, "Years": "1993", "Months": "Jun"}
+        data: [{
+            "Rainfall": 100,
+            "Years": "1992",
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 200,
+            "Years": "1992",
+            "Months": "Feb"
+          },
+          {
+            "Rainfall": 120,
+            "Years": "1992",
+            "Months": "Mar"
+          },
+          {
+            "Rainfall": 270,
+            "Years": "1992",
+            "Months": "Apr"
+          },
+          {
+            "Rainfall": 230,
+            "Years": "1992",
+            "Months": "May"
+          },
+          {
+            "Rainfall": 210,
+            "Years": "1992",
+            "Months": "Jun"
+          },
+          {
+            "Rainfall": 123,
+            "Years": "1993",
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 234,
+            "Years": "1993",
+            "Months": "Feb"
+          },
+          {
+            "Rainfall": 342,
+            "Years": "1993",
+            "Months": "Mar"
+          },
+          {
+            "Rainfall": 234,
+            "Years": "1993",
+            "Months": "Apr"
+          },
+          {
+            "Rainfall": 354,
+            "Years": "1993",
+            "Months": "May"
+          },
+          {
+            "Rainfall": 123,
+            "Years": "1993",
+            "Months": "Jun"
+          }
         ]
       })
     </script>
-</section>
+  </section>
 
-<section>
+  <section>
     <div class="chart">
-        <div id="full-stacked-area"></div>
+      <div id="full-stacked-area"></div>
     </div>
     <script>
       DiCharts.draw({
@@ -417,28 +907,74 @@
             rowSpan: 1,
           }
         },
-        data: [
-          {"Rainfall": 100, "Years": "1992", "Months": "Jan"},
-          {"Rainfall": 200, "Years": "1992", "Months": "Feb"},
-          {"Rainfall": 120, "Years": "1992", "Months": "Mar"},
-          {"Rainfall": 270, "Years": "1992", "Months": "Apr"},
-          {"Rainfall": 230, "Years": "1992", "Months": "May"},
-          {"Rainfall": 210, "Years": "1992", "Months": "Jun"},
-          {"Rainfall": 123, "Years": "1993", "Months": "Jan"},
-          {"Rainfall": 234, "Years": "1993", "Months": "Feb"},
-          {"Rainfall": 342, "Years": "1993", "Months": "Mar"},
-          {"Rainfall": 234, "Years": "1993", "Months": "Apr"},
-          {"Rainfall": 354, "Years": "1993", "Months": "May"},
-          {"Rainfall": 123, "Years": "1993", "Months": "Jun"}
+        data: [{
+            "Rainfall": 100,
+            "Years": "1992",
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 200,
+            "Years": "1992",
+            "Months": "Feb"
+          },
+          {
+            "Rainfall": 120,
+            "Years": "1992",
+            "Months": "Mar"
+          },
+          {
+            "Rainfall": 270,
+            "Years": "1992",
+            "Months": "Apr"
+          },
+          {
+            "Rainfall": 230,
+            "Years": "1992",
+            "Months": "May"
+          },
+          {
+            "Rainfall": 210,
+            "Years": "1992",
+            "Months": "Jun"
+          },
+          {
+            "Rainfall": 123,
+            "Years": "1993",
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 234,
+            "Years": "1993",
+            "Months": "Feb"
+          },
+          {
+            "Rainfall": 342,
+            "Years": "1993",
+            "Months": "Mar"
+          },
+          {
+            "Rainfall": 234,
+            "Years": "1993",
+            "Months": "Apr"
+          },
+          {
+            "Rainfall": 354,
+            "Years": "1993",
+            "Months": "May"
+          },
+          {
+            "Rainfall": 123,
+            "Years": "1993",
+            "Months": "Jun"
+          }
         ]
       })
-
     </script>
-</section>
+  </section>
 
-<section>
+  <section>
     <div class="chart">
-        <div id="bar"></div>
+      <div id="bar"></div>
     </div>
     <script>
       DiCharts.draw({
@@ -466,21 +1002,40 @@
           },
           highlight: ['Jan']
         },
-        data: [
-          {"Rainfall": 100, "Months": "Jan", color: 'red1'},
-          {"Rainfall": 200, "Months": "Feb", color: 'orange1'},
-          {"Rainfall": 120, "Months": "Mar"},
-          {"Rainfall": 270, "Months": "Apr"},
-          {"Rainfall": 230, "Months": "May"},
-          {"Rainfall": 210, "Months": "Jun"},
+        data: [{
+            "Rainfall": 100,
+            "Months": "Jan",
+            color: 'red1'
+          },
+          {
+            "Rainfall": 200,
+            "Months": "Feb",
+            color: 'orange1'
+          },
+          {
+            "Rainfall": 120,
+            "Months": "Mar"
+          },
+          {
+            "Rainfall": 270,
+            "Months": "Apr"
+          },
+          {
+            "Rainfall": 230,
+            "Months": "May"
+          },
+          {
+            "Rainfall": 210,
+            "Months": "Jun"
+          },
         ]
       })
     </script>
-</section>
+  </section>
 
-<section>
+  <section>
     <div class="chart">
-        <div id="column"></div>
+      <div id="column"></div>
     </div>
     <script>
       DiCharts.draw({
@@ -504,21 +1059,38 @@
             outerPadding: 0
           }
         },
-        data: [
-          {"Rainfall": 100, "Months": "Jan"},
-          {"Rainfall": 200, "Months": "Feb"},
-          {"Rainfall": 120, "Months": "Mar"},
-          {"Rainfall": 270, "Months": "Apr"},
-          {"Rainfall": 230, "Months": "May"},
-          {"Rainfall": 210, "Months": "Jun"},
+        data: [{
+            "Rainfall": 100,
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 200,
+            "Months": "Feb"
+          },
+          {
+            "Rainfall": 120,
+            "Months": "Mar"
+          },
+          {
+            "Rainfall": 270,
+            "Months": "Apr"
+          },
+          {
+            "Rainfall": 230,
+            "Months": "May"
+          },
+          {
+            "Rainfall": 210,
+            "Months": "Jun"
+          },
         ]
       })
     </script>
-</section>
+  </section>
 
-<section>
+  <section>
     <div class="chart">
-        <div id="stacked-bar"></div>
+      <div id="stacked-bar"></div>
     </div>
     <script>
       DiCharts.draw({
@@ -545,27 +1117,74 @@
             outerPadding: 0
           }
         },
-        data: [
-          {"Rainfall": 1000000, "Years": "1992", "Months": "Jan"},
-          {"Rainfall": 2000000, "Years": "1992", "Months": "Feb"},
-          {"Rainfall": 1200000, "Years": "1992", "Months": "Mar"},
-          {"Rainfall": 2700000, "Years": "1992", "Months": "Apr"},
-          {"Rainfall": 2300000, "Years": "1992", "Months": "May"},
-          {"Rainfall": 2100000, "Years": "1992", "Months": "Jun"},
-          {"Rainfall": 1230000, "Years": "1993", "Months": "Jan"},
-          {"Rainfall": 2340000, "Years": "1993", "Months": "Feb"},
-          {"Rainfall": 3420000, "Years": "1993", "Months": "Mar"},
-          {"Rainfall": 2340000, "Years": "1993", "Months": "Apr"},
-          {"Rainfall": 3540000, "Years": "1993", "Months": "May"},
-          {"Rainfall": 1230000, "Years": "1993", "Months": "Jun"}
+        data: [{
+            "Rainfall": 1000000,
+            "Years": "1992",
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 2000000,
+            "Years": "1992",
+            "Months": "Feb"
+          },
+          {
+            "Rainfall": 1200000,
+            "Years": "1992",
+            "Months": "Mar"
+          },
+          {
+            "Rainfall": 2700000,
+            "Years": "1992",
+            "Months": "Apr"
+          },
+          {
+            "Rainfall": 2300000,
+            "Years": "1992",
+            "Months": "May"
+          },
+          {
+            "Rainfall": 2100000,
+            "Years": "1992",
+            "Months": "Jun"
+          },
+          {
+            "Rainfall": 1230000,
+            "Years": "1993",
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 2340000,
+            "Years": "1993",
+            "Months": "Feb"
+          },
+          {
+            "Rainfall": 3420000,
+            "Years": "1993",
+            "Months": "Mar"
+          },
+          {
+            "Rainfall": 2340000,
+            "Years": "1993",
+            "Months": "Apr"
+          },
+          {
+            "Rainfall": 3540000,
+            "Years": "1993",
+            "Months": "May"
+          },
+          {
+            "Rainfall": 1230000,
+            "Years": "1993",
+            "Months": "Jun"
+          }
         ]
       })
     </script>
-</section>
+  </section>
 
-<section>
+  <section>
     <div class="chart">
-        <div id="full-stacked-bar"></div>
+      <div id="full-stacked-bar"></div>
     </div>
     <script>
       DiCharts.draw({
@@ -592,27 +1211,74 @@
             outerPadding: 0
           }
         },
-        data: [
-          {"Rainfall": 100, "Years": "1992", "Months": "Jan"},
-          {"Rainfall": 200, "Years": "1992", "Months": "Feb"},
-          {"Rainfall": 120, "Years": "1992", "Months": "Mar"},
-          {"Rainfall": 270, "Years": "1992", "Months": "Apr"},
-          {"Rainfall": 230, "Years": "1992", "Months": "May"},
-          {"Rainfall": 210, "Years": "1992", "Months": "Jun"},
-          {"Rainfall": 123, "Years": "1993", "Months": "Jan"},
-          {"Rainfall": 234, "Years": "1993", "Months": "Feb"},
-          {"Rainfall": 342, "Years": "1993", "Months": "Mar"},
-          {"Rainfall": 234, "Years": "1993", "Months": "Apr"},
-          {"Rainfall": 354, "Years": "1993", "Months": "May"},
-          {"Rainfall": 123, "Years": "1993", "Months": "Jun"}
+        data: [{
+            "Rainfall": 100,
+            "Years": "1992",
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 200,
+            "Years": "1992",
+            "Months": "Feb"
+          },
+          {
+            "Rainfall": 120,
+            "Years": "1992",
+            "Months": "Mar"
+          },
+          {
+            "Rainfall": 270,
+            "Years": "1992",
+            "Months": "Apr"
+          },
+          {
+            "Rainfall": 230,
+            "Years": "1992",
+            "Months": "May"
+          },
+          {
+            "Rainfall": 210,
+            "Years": "1992",
+            "Months": "Jun"
+          },
+          {
+            "Rainfall": 123,
+            "Years": "1993",
+            "Months": "Jan"
+          },
+          {
+            "Rainfall": 234,
+            "Years": "1993",
+            "Months": "Feb"
+          },
+          {
+            "Rainfall": 342,
+            "Years": "1993",
+            "Months": "Mar"
+          },
+          {
+            "Rainfall": 234,
+            "Years": "1993",
+            "Months": "Apr"
+          },
+          {
+            "Rainfall": 354,
+            "Years": "1993",
+            "Months": "May"
+          },
+          {
+            "Rainfall": 123,
+            "Years": "1993",
+            "Months": "Jun"
+          }
         ]
       })
     </script>
-</section>
+  </section>
 
-<section>
+  <section>
     <div class="chart">
-        <div id="clustered-bar"></div>
+      <div id="clustered-bar"></div>
     </div>
     <script>
       DiCharts.draw({
@@ -637,26 +1303,69 @@
             outerPadding: 0
           }
         },
-        data: [
-          {"Rainfall": 100, "Years": "1991", "Purpose": "ODA"},
-          {"Rainfall": 100, "Years": "1991", "Purpose": "DFI"},
-          {"Rainfall": 200, "Years": "1992", "Purpose": "DFI"},
-          {"Rainfall": 120, "Years": "1993", "Purpose": "ODA"},
-          {"Rainfall": 120, "Years": "1993", "Purpose": "DFI"},
-          {"Rainfall": 270, "Years": "1994", "Purpose": "ODA"},
-          {"Rainfall": 270, "Years": "1994", "Purpose": "DFI"},
-          {"Rainfall": 230, "Years": "1995", "Purpose": "ODA"},
-          {"Rainfall": 230, "Years": "1995", "Purpose": "DFI"},
-          {"Rainfall": 210, "Years": "1996", "Purpose": "ODA"},
-          {"Rainfall": 210, "Years": "1996", "Purpose": "DFI"},
+        data: [{
+            "Rainfall": 100,
+            "Years": "1991",
+            "Purpose": "ODA"
+          },
+          {
+            "Rainfall": 100,
+            "Years": "1991",
+            "Purpose": "DFI"
+          },
+          {
+            "Rainfall": 200,
+            "Years": "1992",
+            "Purpose": "DFI"
+          },
+          {
+            "Rainfall": 120,
+            "Years": "1993",
+            "Purpose": "ODA"
+          },
+          {
+            "Rainfall": 120,
+            "Years": "1993",
+            "Purpose": "DFI"
+          },
+          {
+            "Rainfall": 270,
+            "Years": "1994",
+            "Purpose": "ODA"
+          },
+          {
+            "Rainfall": 270,
+            "Years": "1994",
+            "Purpose": "DFI"
+          },
+          {
+            "Rainfall": 230,
+            "Years": "1995",
+            "Purpose": "ODA"
+          },
+          {
+            "Rainfall": 230,
+            "Years": "1995",
+            "Purpose": "DFI"
+          },
+          {
+            "Rainfall": 210,
+            "Years": "1996",
+            "Purpose": "ODA"
+          },
+          {
+            "Rainfall": 210,
+            "Years": "1996",
+            "Purpose": "DFI"
+          },
         ]
       })
     </script>
-</section>
+  </section>
 
-<section>
+  <section>
     <div class="chart" style="height: 500px">
-        <div id="dual-sidebar"></div>
+      <div id="dual-sidebar"></div>
     </div>
     <script>
       DiCharts.draw({
@@ -695,8 +1404,7 @@
             gutter: 150
           }
         },
-        data: [
-          {
+        data: [{
             "uid": "ryYun9C5-",
             "year": 2015,
             "value": 34540000,
@@ -907,11 +1615,110 @@
         ]
       })
     </script>
-</section>
+  </section>
 
-<section>
+  <section>
+    <div class="chart" style="height: 500px">
+      <div id="dual-sidebar-uae"></div>
+    </div>
+    <script>
+      DiCharts.draw({
+        element: document.getElementById('dual-sidebar-uae'),
+        config: {
+          title: 'Dual Sidebar Chart UAE',
+          titleAlignment: 'center',
+          type: 'dual-sidebar',
+          orientation: 'horizontal',
+          groupBy: 'flow_type',
+          subGroupBy: 'flow_category',
+          splitBy: 'direction',
+          coloring: 'color',
+          showLabels: true,
+          linearAxis: {
+            showAxis: true,
+            indicator: 'value',
+            ticking: 'end',
+            axisMaximum: 3e9,
+            absolute: true,
+          },
+          categoryAxis: {
+            showAxis: true,
+            indicator: 'flow_name',
+            innerPadding: 1.5,
+            outerPadding: 4,
+          },
+          dualSidebar: {
+            gutter: 150
+          }
+        },
+        data: [
+          {
+            "uid": "rJlHO1OSiZ",
+            "year": 2015,
+            "value": 4490000000,
+            "flow_id": "oda-out",
+            "flow_name": "Official development assistance",
+            "short_name": "Gross disbursements",
+            "flow_category": "ODA",
+            "flow_type": "official",
+            "direction": "out",
+            "color": "#e8443a"
+          },
+          {
+            "uid": "HkHdyOSi-",
+            "year": 2015,
+            "value": 108630000,
+            "flow_id": "oda-capital-repay",
+            "flow_name": "Capital repayments on ODA loans",
+            "short_name": "Capital repayments",
+            "flow_category": "ODA",
+            "flow_type": "official",
+            "direction": "in",
+            "color": "#e8443a"
+          },
+          {
+            "uid": "BkWBdJOriW",
+            "year": 2015,
+            "value": 250000,
+            "flow_id": "oofs-capital-repay",
+            "flow_name": "Capital repayments on OOFs loans",
+            "short_name": "Capital repayments",
+            "flow_category": "OOFs",
+            "flow_type": "official",
+            "direction": "in",
+            "color": "#5da3d9"
+          },
+          {
+            "uid": "SyzBdy_Bs-",
+            "year": 2015,
+            "value": 3836430000,
+            "flow_id": "oofs-out",
+            "flow_name": "Other official flows",
+            "short_name": "Gross disbursements",
+            "flow_category": "OOFs",
+            "flow_type": "official",
+            "direction": "out",
+            "color": "#bcd4f0"
+          },
+          {
+            "uid": "ByQr_Jurob",
+            "year": 2015,
+            "value": 32192743675.2072,
+            "flow_id": "remittances-devcountries",
+            "flow_name": "Remittances to developing countries",
+            "short_name": "Outflows to developing countries",
+            "flow_category": "Remittances",
+            "flow_type": "private",
+            "direction": "out",
+            "color": "#c2135b"
+          }
+        ]
+      })
+    </script>
+  </section>
+  <section>
     <div class="chart">
-        <div id="pie_chart"></div>
+      <div id="pie_chart"></div>
     </div>
     <script>
       DiCharts.draw({
@@ -934,18 +1741,27 @@
             'alignment': 'center'
           }
         },
-        data: [
-          {'Country': 'Tanzania', 'Population': 53470000},
-          {'Country': 'Kenya', 'Population': 46050000},
-          {'Country': '‌Uganda', 'Population': 39030000, color: 'teal'},
+        data: [{
+            'Country': 'Tanzania',
+            'Population': 53470000
+          },
+          {
+            'Country': 'Kenya',
+            'Population': 46050000
+          },
+          {
+            'Country': '‌Uganda',
+            'Population': 39030000,
+            color: 'teal'
+          },
         ]
       })
     </script>
-</section>
+  </section>
 
-<section>
+  <section>
     <div class="chart">
-        <div id="donut-chart"></div>
+      <div id="donut-chart"></div>
     </div>
     <script>
       DiCharts.draw({
@@ -968,18 +1784,26 @@
             alignment: 'center'
           }
         },
-        data: [
-          {'Country': 'Tanzania', 'Population': 53470000},
-          {'Country': 'Kenya', 'Population': 46050000},
-          {'Country': '‌Uganda', 'Population': 39030000},
+        data: [{
+            'Country': 'Tanzania',
+            'Population': 53470000
+          },
+          {
+            'Country': 'Kenya',
+            'Population': 46050000
+          },
+          {
+            'Country': '‌Uganda',
+            'Population': 39030000
+          },
         ]
       })
     </script>
-</section>
+  </section>
 
-<section>
+  <section>
     <div class="chart">
-        <div id="treemap-chart"></div>
+      <div id="treemap-chart"></div>
     </div>
     <script>
       DiCharts.draw({
@@ -998,8 +1822,7 @@
             suffix: 'tons'
           }
         },
-        data: [
-          {
+        data: [{
             "label": 'World',
           },
           {
@@ -1048,11 +1871,11 @@
         ]
       })
     </script>
-</section>
+  </section>
 
-<section>
+  <section>
     <div class="chart">
-        <div id="treemap-chart-w-level-indicators"></div>
+      <div id="treemap-chart-w-level-indicators"></div>
     </div>
     <script>
       DiCharts.draw({
@@ -1070,8 +1893,7 @@
             suffix: 'tons'
           }
         },
-        data: [
-          {
+        data: [{
             "planet": 'Earth',
           },
           {
@@ -1129,11 +1951,11 @@
         ]
       })
     </script>
-</section>
+  </section>
 
-<section>
+  <section>
     <div class="chart">
-        <div id="treemap-chart-from-flat"></div>
+      <div id="treemap-chart-from-flat"></div>
     </div>
     <script>
       DiCharts.draw({
@@ -1153,8 +1975,7 @@
             tile: 'squarify'
           }
         },
-        data: [
-          {
+        data: [{
             "uid": "BkTNP3WiW",
             "id": "ME",
             "name": "Montenegro",
@@ -1237,11 +2058,11 @@
         ]
       })
     </script>
-</section>
+  </section>
 
-<section>
+  <section>
     <div class="chart">
-        <div id="compound-treemap-chart"></div>
+      <div id="compound-treemap-chart"></div>
     </div>
     <script>
       DiCharts.draw({
@@ -1256,8 +2077,7 @@
             value: 'value'
           }
         },
-        data: [
-          {
+        data: [{
             "label": 'World',
             "color": '#86c',
           },
@@ -1309,11 +2129,11 @@
         ]
       })
     </script>
-</section>
+  </section>
 
-<section>
+  <section>
     <div class="chart">
-        <div id="partition-chart"></div>
+      <div id="partition-chart"></div>
     </div>
     <script>
       DiCharts.draw({
@@ -1337,8 +2157,7 @@
             prefix: 'US$'
           }
         },
-        data: [
-          {
+        data: [{
             "label": 'World',
           },
           {
@@ -1378,11 +2197,11 @@
         ]
       })
     </script>
-</section>
+  </section>
 
-<section>
+  <section>
     <div class="chart">
-        <div id="bubble-chart"></div>
+      <div id="bubble-chart"></div>
     </div>
     <script>
       DiCharts.draw({
@@ -1433,8 +2252,7 @@
             showLegend: true,
           },
 
-          annotations: [
-            {
+          annotations: [{
               title: 'The Red zone',
               body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, animi atque consectetur consequatur delectus esse excepturi exercitationem fugit impedit libero molestias, non officia provident quae, repellendus suscipit tempore vel veritatis.',
               fill: 'red',
@@ -1464,44 +2282,198 @@
           },
 
         },
-        data: [
-          {id: '1', "Age": 25, "Weight": 47, "Height": 151, "Region": 'Kampala'},
-          {id: '2', "Age": 150, "Weight": 36, "Height": 139, "Region": 'Kampala', color: 'green'},
-          {id: '3', "Age": 65, "Weight": 31, "Height": 136, "Region": 'Kampala'},
-          {id: '4', "Age": 41, "Weight": 53, "Height": 156, "Region": 'Kampala'},
-          {id: '5', "Age": 51, "Weight": 41, "Height": 145, "Region": 'Kampala'},
-          {id: '6', "Age": 35, "Weight": 62, "Height": 163, "Region": 'Kampala'},
-          {id: '7', "Age": 32, "Weight": 38, "Height": 149, "Region": 'Kampala'},
-          {id: '8', "Age": 60, "Weight": 36, "Height": 144, "Region": 'Jinja'},
-          {id: '9', "Age": 56, "Weight": 42, "Height": 120, "Region": 'Jinja'},
-          {id: '10', "Age": 70, "Weight": 54, "Height": 160, "Region": 'Jinja'},
-          {id: '11', "Age": 45, "Weight": 45, "Height": 126, "Region": 'Jinja'},
-          {id: '12', "Age": 36, "Weight": 56, "Height": 138, "Region": 'Jinja'},
-          {id: '13', "Age": 28, "Weight": 65, "Height": 136, "Region": 'Jinja'},
-          {id: '14', "Age": 40, "Weight": 70, "Height": 170, "Region": 'Jinja'},
+        data: [{
+            id: '1',
+            "Age": 25,
+            "Weight": 47,
+            "Height": 151,
+            "Region": 'Kampala'
+          },
+          {
+            id: '2',
+            "Age": 150,
+            "Weight": 36,
+            "Height": 139,
+            "Region": 'Kampala',
+            color: 'green'
+          },
+          {
+            id: '3',
+            "Age": 65,
+            "Weight": 31,
+            "Height": 136,
+            "Region": 'Kampala'
+          },
+          {
+            id: '4',
+            "Age": 41,
+            "Weight": 53,
+            "Height": 156,
+            "Region": 'Kampala'
+          },
+          {
+            id: '5',
+            "Age": 51,
+            "Weight": 41,
+            "Height": 145,
+            "Region": 'Kampala'
+          },
+          {
+            id: '6',
+            "Age": 35,
+            "Weight": 62,
+            "Height": 163,
+            "Region": 'Kampala'
+          },
+          {
+            id: '7',
+            "Age": 32,
+            "Weight": 38,
+            "Height": 149,
+            "Region": 'Kampala'
+          },
+          {
+            id: '8',
+            "Age": 60,
+            "Weight": 36,
+            "Height": 144,
+            "Region": 'Jinja'
+          },
+          {
+            id: '9',
+            "Age": 56,
+            "Weight": 42,
+            "Height": 120,
+            "Region": 'Jinja'
+          },
+          {
+            id: '10',
+            "Age": 70,
+            "Weight": 54,
+            "Height": 160,
+            "Region": 'Jinja'
+          },
+          {
+            id: '11',
+            "Age": 45,
+            "Weight": 45,
+            "Height": 126,
+            "Region": 'Jinja'
+          },
+          {
+            id: '12',
+            "Age": 36,
+            "Weight": 56,
+            "Height": 138,
+            "Region": 'Jinja'
+          },
+          {
+            id: '13',
+            "Age": 28,
+            "Weight": 65,
+            "Height": 136,
+            "Region": 'Jinja'
+          },
+          {
+            id: '14',
+            "Age": 40,
+            "Weight": 70,
+            "Height": 170,
+            "Region": 'Jinja'
+          },
         ]
       }).then(chart => {
         setTimeout(() => {
-          chart.update([
-            {id: '1', "Weight": 47, "Height": 151, "Region": 'Kampala'},
-            {id: '2', "Weight": 50, "Height": 139, "Region": 'Kampala', color: 'green'},
-            {id: '3', "Weight": 31, "Height": 136, "Region": 'Kampala'},
-            {id: '4', "Weight": 53, "Height": 156, "Region": 'Kampala'},
-            {id: '5', "Weight": 41, "Height": 145, "Region": 'Kampala'},
-            {id: '6', "Weight": 62, "Height": 163, "Region": 'Kampala'},
-            {id: '7', "Weight": 38, "Height": 149, "Region": 'Kampala'},
-            {id: '8', "Weight": 36, "Height": 144, "Region": 'Jinja'},
-            {id: '10', "Weight": 54, "Height": 160, "Region": 'Jinja'},
-            {id: '11', "Weight": 45, "Height": 126, "Region": 'Jinja'},
-            {id: '12', "Weight": 56, "Height": 138, "Region": 'Jinja'},
-            {id: '13', "Weight": 65, "Height": 136, "Region": 'Jinja'},
-            {id: '14', "Weight": 70, "Height": 170, "Region": 'Jinja'},
-            {id: '15', "Weight": 40, "Height": 120, "Region": 'Jinja'},
+          chart.update([{
+              id: '1',
+              "Weight": 47,
+              "Height": 151,
+              "Region": 'Kampala'
+            },
+            {
+              id: '2',
+              "Weight": 50,
+              "Height": 139,
+              "Region": 'Kampala',
+              color: 'green'
+            },
+            {
+              id: '3',
+              "Weight": 31,
+              "Height": 136,
+              "Region": 'Kampala'
+            },
+            {
+              id: '4',
+              "Weight": 53,
+              "Height": 156,
+              "Region": 'Kampala'
+            },
+            {
+              id: '5',
+              "Weight": 41,
+              "Height": 145,
+              "Region": 'Kampala'
+            },
+            {
+              id: '6',
+              "Weight": 62,
+              "Height": 163,
+              "Region": 'Kampala'
+            },
+            {
+              id: '7',
+              "Weight": 38,
+              "Height": 149,
+              "Region": 'Kampala'
+            },
+            {
+              id: '8',
+              "Weight": 36,
+              "Height": 144,
+              "Region": 'Jinja'
+            },
+            {
+              id: '10',
+              "Weight": 54,
+              "Height": 160,
+              "Region": 'Jinja'
+            },
+            {
+              id: '11',
+              "Weight": 45,
+              "Height": 126,
+              "Region": 'Jinja'
+            },
+            {
+              id: '12',
+              "Weight": 56,
+              "Height": 138,
+              "Region": 'Jinja'
+            },
+            {
+              id: '13',
+              "Weight": 65,
+              "Height": 136,
+              "Region": 'Jinja'
+            },
+            {
+              id: '14',
+              "Weight": 70,
+              "Height": 170,
+              "Region": 'Jinja'
+            },
+            {
+              id: '15',
+              "Weight": 40,
+              "Height": 120,
+              "Region": 'Jinja'
+            },
           ]);
         }, 10000)
       })
     </script>
-</section>
+  </section>
 
 </body>
 
